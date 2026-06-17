@@ -2,7 +2,7 @@
   {
     "kernelSource": {
       "name": "YAMK-Standard",
-      "repo": "https://github.com/One4Lots/kernel_xiaomi_sm7125.git",
+      "repo": "https://github.com/One4Lots/kernel_qcom_sm7125.git",
       "branch": "baklava",
       "device": "MIATOLL",
       "defconfig": "vendor/xiaomi/miatoll_defconfig"
@@ -68,7 +68,7 @@
   {
     "kernelSource": {
       "name": "YAMK-KSU_Next",
-      "repo": "https://github.com/One4Lots/kernel_xiaomi_sm7125.git",
+      "repo": "https://github.com/One4Lots/kernel_qcom_sm7125.git",
       "branch": "ksu",
       "device": "MIATOLL",
       "defconfig": "vendor/xiaomi/miatoll_defconfig"
