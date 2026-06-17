@@ -1,0 +1,134 @@
+[
+  {
+    "kernelSource": {
+      "name": "YAMK-Standard",
+      "repo": "https://github.com/One4Lots/kernel_xiaomi_sm7125.git",
+      "branch": "baklava",
+      "device": "MIATOLL",
+      "defconfig": "vendor/xiaomi/miatoll_defconfig"
+    },
+    "anykernel": {
+      "repo": "https://github.com/One4Lots/anykernel.git",
+      "branch": "non-ksu"
+    },
+    "toolchains": {
+      "android_clang": {
+        "enable": true,
+        "name": "Android Clang",
+        "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86",
+        "branch": "main-kernel",
+        "sparse_dir": "clang-r584948"
+      },
+      "android_ndk": {
+        "enable": false,
+        "name": "Android NDK",
+        "url": "https://dl.google.com/android/repository/android-ndk-r29-linux.zip"
+      },
+      "llvm": {
+        "enable": false,
+        "name": "LLVM Toolchain",
+        "url": "https://www.kernel.org/pub/tools/llvm/files/llvm-22.1.7-x86_64.tar.gz"
+      },
+      "neutron": {
+        "enable": false,
+        "name": "Neutron Clang",
+        "url": "https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman"
+      },
+      "archive": {
+        "enable": false,
+        "name": "Custom Archive",
+        "url": "https://github.com/mvaisakh/gcc-build/releases/download/07062026/gcc-instrumented-arm64.xz"
+      }
+    },
+    "gcc": {
+      "arm64": {
+        "enable": true,
+        "url": "https://www.kernel.org/pub/tools/crosstool/files/bin/x86_64/16.1.0/x86_64-gcc-16.1.0-nolibc-aarch64-linux.tar.xz",
+        "prefix": "aarch64-none-linux-gnu-"
+      },
+      "arm32": {
+        "enable": true,
+        "url": "https://www.kernel.org/pub/tools/crosstool/files/bin/x86_64/16.1.0/x86_64-gcc-16.1.0-nolibc-arm-linux-gnueabi.tar.xz",
+        "prefix": "arm-none-linux-gnueabihf-"
+      }
+    },
+    "integration": {
+      "type": "none",
+      "status": "Standard (Unrooted)",
+      "manager": "Not Applicable"
+    },
+    "release": {
+      "enable": true,
+      "target_repo": "One4Lots/release",
+      "branch": "yamk",
+      "tag": "beta",
+      "name": "yamk-release"
+    }
+  },
+  {
+    "kernelSource": {
+      "name": "YAMK-KSU_Next",
+      "repo": "https://github.com/One4Lots/kernel_xiaomi_sm7125.git",
+      "branch": "ksu",
+      "device": "MIATOLL",
+      "defconfig": "vendor/xiaomi/miatoll_defconfig"
+    },
+    "anykernel": {
+      "repo": "https://github.com/One4Lots/anykernel.git",
+      "branch": "ksu-miatoll"
+    },
+    "toolchains": {
+      "android_clang": {
+        "enable": true,
+        "name": "Android Clang",
+        "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86",
+        "branch": "main-kernel",
+        "sparse_dir": "clang-r584948"
+      },
+      "android_ndk": {
+        "enable": false,
+        "name": "Android NDK",
+        "url": "https://dl.google.com/android/repository/android-ndk-r29-linux.zip"
+      },
+      "llvm": {
+        "enable": false,
+        "name": "LLVM Toolchain",
+        "url": "https://www.kernel.org/pub/tools/llvm/files/llvm-22.1.7-x86_64.tar.gz"
+      },
+      "neutron": {
+        "enable": false,
+        "name": "Neutron Clang",
+        "url": "https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman"
+      },
+      "archive": {
+        "enable": false,
+        "name": "Custom Archive",
+        "url": "https://github.com/mvaisakh/gcc-build/releases/download/07062026/gcc-instrumented-arm64.xz"
+      }
+    },
+    "gcc": {
+      "arm64": {
+        "enable": true,
+        "url": "https://www.kernel.org/pub/tools/crosstool/files/bin/x86_64/16.1.0/x86_64-gcc-16.1.0-nolibc-aarch64-linux.tar.xz",
+        "prefix": "aarch64-none-linux-gnu-"
+      },
+      "arm32": {
+        "enable": true,
+        "url": "https://www.kernel.org/pub/tools/crosstool/files/bin/x86_64/16.1.0/x86_64-gcc-16.1.0-nolibc-arm-linux-gnueabi.tar.xz",
+        "prefix": "arm-none-linux-gnueabihf-"
+      }
+    },
+    "integration": {
+      "type": "official",
+      "branch": "legacy",
+      "manager": "KernelSU-Next Manager v3.2.0+"
+    },
+    "release": {
+      "enable": true,
+      "target_repo": "One4Lots/release",
+      "branch": "yamk",
+      "tag": "beta",
+      "name": "yamk-release"
+    }
+  }
+]
