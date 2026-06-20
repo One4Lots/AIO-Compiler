@@ -186,18 +186,18 @@ jobs:
           if [ "${{ matrix.gcc.arm64.enable }}" = "true" ]; then
             mkdir -p gcc64 && cd gcc64
             curl -LSs "${{ matrix.gcc.arm64.url }}" -o gcc64.tar.xz
-            tar -Jxf gcc64.tar.xz --strip-components=1
+            tar -Jxf gcc64.tar.xz --strip-components=2
             echo "$GITHUB_WORKSPACE/gcc64/bin" >> $GITHUB_PATH
             echo "CC_ARM64=${{ matrix.gcc.arm64.prefix }}" >> $GITHUB_ENV
           else
-            echo "CC_ARM64=aarch64-linux-gnu-" >> $GITHUB_ENV
+            echo "CC_ARM64=aarch64-linux-" >> $GITHUB_ENV
           fi
 
           if [ "${{ matrix.gcc.arm32.enable }}" = "true" ]; then
             cd $GITHUB_WORKSPACE
             mkdir -p gcc32 && cd gcc32
             curl -LSs "${{ matrix.gcc.arm32.url }}" -o gcc32.tar.xz
-            tar -Jxf gcc32.tar.xz --strip-components=1
+            tar -Jxf gcc32.tar.xz --strip-components=2
             echo "$GITHUB_WORKSPACE/gcc32/bin" >> $GITHUB_PATH
             echo "CC_ARM32=${{ matrix.gcc.arm32.prefix }}" >> $GITHUB_ENV
           else
@@ -217,7 +217,6 @@ jobs:
           ccache -z
 
           MAKE_ARGS=(
-            -j$(nproc --all)
             O=out
             ARCH=arm64
             SUBARCH=arm64
@@ -279,7 +278,7 @@ jobs:
           else
             DTB_FILES=$(find $KDIR/out/arch/arm64/boot/dts/ -name "*.dtb")
             if [ -n "$DTB_FILES" ]; then
-              find $KDIR/out/arch/arm64/boot/dts/ -name "*.dtb" -exec cat {} + > AnyKernel/dtb
+              find $KDIR/out/arch/arm64/boot/dts/ -name "*.dtb" -exec cat {} + > AnyKernel/dtb.img
             fi
           fi
 
