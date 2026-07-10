@@ -61,7 +61,7 @@
       "enable": true,
       "target_repo": "One4Lots/release",
       "branch": "yamk",
-      "tag": "beta",
+      "tag": "pi",
       "name": "yamk-release"
     }
   },
@@ -119,15 +119,15 @@
       }
     },
     "integration": {
-      "type": "official",
-      "branch": "legacy",
-      "manager": "KernelSU-Next Manager v3.2.0+"
+      "type": "manual",
+      "branch": "master",
+      "manager": "Backslashxx Manager v3.2.5+"
     },
     "release": {
       "enable": true,
       "target_repo": "One4Lots/release",
       "branch": "yamk",
-      "tag": "beta",
+      "tag": "pi",
       "name": "yamk-release"
     }
   }

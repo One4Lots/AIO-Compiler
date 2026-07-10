@@ -95,7 +95,7 @@ jobs:
           
           if [ -f ".gitmodules" ]; then
             echo "[ INFO ] Native submodules detected. Initializing..."
-            git submodule update --init --depth=1
+            git submodule update --init --recursive
           fi
           
           echo "KDIR=$(pwd)" >> $GITHUB_ENV
