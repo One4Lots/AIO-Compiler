@@ -67,7 +67,7 @@
   },
   {
     "kernelSource": {
-      "name": "YAMK-KSU_Next",
+      "name": "YAMK-KSU",
       "repo": "https://github.com/One4Lots/kernel_qcom_sm7125.git",
       "branch": "ksu",
       "device": "MIATOLL",
