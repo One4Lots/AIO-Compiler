@@ -44,12 +44,12 @@
       "arm64": {
         "enable": true,
         "url": "https://www.kernel.org/pub/tools/crosstool/files/bin/x86_64/16.1.0/x86_64-gcc-16.1.0-nolibc-aarch64-linux.tar.xz",
-        "prefix": "aarch64-none-linux-gnu-"
+        "prefix": "aarch64-linux-"
       },
       "arm32": {
         "enable": true,
         "url": "https://www.kernel.org/pub/tools/crosstool/files/bin/x86_64/16.1.0/x86_64-gcc-16.1.0-nolibc-arm-linux-gnueabi.tar.xz",
-        "prefix": "arm-none-linux-gnueabihf-"
+        "prefix": "arm-linux-gnueabi-"
       }
     },
     "integration": {
@@ -110,12 +110,12 @@
       "arm64": {
         "enable": true,
         "url": "https://www.kernel.org/pub/tools/crosstool/files/bin/x86_64/16.1.0/x86_64-gcc-16.1.0-nolibc-aarch64-linux.tar.xz",
-        "prefix": "aarch64-none-linux-gnu-"
+        "prefix": "aarch64-linux-"
       },
       "arm32": {
         "enable": true,
         "url": "https://www.kernel.org/pub/tools/crosstool/files/bin/x86_64/16.1.0/x86_64-gcc-16.1.0-nolibc-arm-linux-gnueabi.tar.xz",
-        "prefix": "arm-none-linux-gnueabihf-"
+        "prefix": "arm-linux-gnueabi-"
       }
     },
     "integration": {
