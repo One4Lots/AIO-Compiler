@@ -201,7 +201,7 @@
     "kernelSource": {
       "name": "YAMK-KSU-STUNE",
       "repo": "https://github.com/One4Lots/kernel_qcom_sm7125.git",
-      "branch": "ksu_uclamp",
+      "branch": "ksu_stune",
       "device": "MIATOLL",
       "defconfig": "vendor/xiaomi/miatoll_defconfig"
     },
